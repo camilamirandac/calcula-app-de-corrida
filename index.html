@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Distância em KM" id= "DistanciaKM"/>
+    <input placeholder="Tempo em minutos" id= "TempoMin"/>
+    <button onclick="CalculaCorrida ()">Calcula</button>
+        <script>
+        function CalculaCorrida () {
+        var isvalordadistanciavazio = DistanciaKM.value == '';
+        if(isvalordadistanciavazio) {alert('Informe o valor da distância')}
+        else {
+                //
+            }
+        return;
+        var TarifaDinamica= 1.4;
+        var Tempo= TempoMin.value * 0.26;
+        var Distancia= DistanciaKM.value * TarifaDinamica;
+        var valordacorrida= Distancia+Tempo;
+        alert("O valor da Corrida é: " + valordacorrida.toFixed(2).replace('.',','));
+        }
+        </script>
+</body>
+</html>
